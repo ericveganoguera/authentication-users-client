@@ -1,0 +1,109 @@
+body {
+    font-family: 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans', 'Noto Sans Symbols 2', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    border: 1px blue solid;
+    box-sizing: border-box;
+}
+
+.container {
+    border-radius: 24px;
+    border: 1px #BDBDBD solid;
+}
+
+.content {
+    padding: 10% 15%;
+}
+
+.content>* {
+    margin: 30px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24.52px;
+    
+}
+
+.description {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.title, .description{
+    color: #333333;
+    width: 80%;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.form-login * {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 16px;
+
+    
+    border-radius: 8px;
+
+    &[type="email"],
+    &[type="password"] {
+        border: 1px #BDBDBD solid;
+        width: 100%;
+        text-indent: 30px;
+        padding: 16px;
+    }
+    &[type="submit"] {
+        background-color: #2F80ED;
+        border: 1px #BDBDBD solid;
+        color: white;
+        padding: 14px;
+        margin-top: 15px;
+    }
+}
+
+.input-form{
+    display: flex;
+    position: relative;
+    
+    & i{
+        position: absolute;
+        padding: 16px;
+    }
+}
+
+
+.other-login-options, .login {
+    text-align: center;
+    color: #828282;
+    font-size: 14px;
+}
+
+.login a{
+    text-decoration: none;
+    color: #2D9CDB;
+}
+
+.social-network-login{
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 32px;
+    color: #828282;
+
+    & i:hover{
+        color: #575757;  
+        cursor: pointer;
+    }
+}
