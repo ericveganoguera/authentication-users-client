@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 import "./Register.css";
+import Logo from "../devchallenges-logo-transparent.png";
+import { useState } from "react";
 
 function Register() {
+  const [isThemeLight, setIsThemeLight] = useState(true);
+
   return (
-    <div>
-      <section className="container">
+      <section className={`${isThemeLight? "light" : "dark"} container-body`}>
+          <button
+            onClick={()=>(isThemeLight? setIsThemeLight(false):setIsThemeLight(true))}
+            className="button-theme"
+          >{isThemeLight ? "🌙" : "🌞"}</button>
         <div className="content">
-          <div className="title">
-            Join thousands of learners from around the world{" "}
+          <p className={`${isThemeLight ? "text-light-theme" : "text-dark-theme" }`}><img src={Logo} alt="logo" className="logo" /> devchallenges</p>
+          <div className={`${isThemeLight? "text-light-theme" : "text-dark-theme"} title`}>
+            <p>Join thousands of learners from around the world</p>
           </div>
-          <p className="description">
+          <p className={`${isThemeLight? "text-light-theme" : "text-dark-theme"} description`}>
             Master web development by making real-life projects. There are
             multiple paths for you to choose
           </p>
@@ -38,7 +46,6 @@ function Register() {
           </p>
         </div>
       </section>
-    </div>
   );
 }
 

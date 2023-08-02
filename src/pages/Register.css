@@ -1,33 +1,68 @@
 body {
     font-family: 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans', 'Noto Sans Symbols 2', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0;
     margin: 0;
-    border: 1px blue solid;
-    box-sizing: border-box;
+    padding: 0;
 }
 
-.container {
-    border-radius: 24px;
-    border: 1px #BDBDBD solid;
+.light {
+    transition: 0.5s;
+    background-color: white;
+}
+
+.dark {
+    transition: 0.5s;
+    background-color: black;
+}
+
+.button-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    background-color: #2F80ED;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 14px;
+
+}
+
+.container-body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 .content {
-    padding: 10% 15%;
+    border-radius: 24px;
+    border: 1px #BDBDBD solid;
+    width: 70%;
+    max-width: 600px;
+    height: 800px;
+    padding: 60px;
+    margin: 0 auto;
 }
 
 .content>* {
-    margin: 30px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24.52px;
-    
+
+    width: 80%;
+
+    & p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24.52px;
+    }
+
 }
 
 .description {
@@ -35,11 +70,17 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    width: 90%;
 }
 
-.title, .description{
+.text-light-theme {
+    transition: 0.5s;
     color: #333333;
-    width: 80%;
+}
+
+.text-dark-theme {
+    transition: 0.5s;
+    color: #E0E0E0;
 }
 
 .form-login {
@@ -54,7 +95,7 @@ body {
     font-weight: 400;
     font-size: 16px;
 
-    
+
     border-radius: 8px;
 
     &[type="email"],
@@ -64,46 +105,63 @@ body {
         text-indent: 30px;
         padding: 16px;
     }
+
     &[type="submit"] {
         background-color: #2F80ED;
-        border: 1px #BDBDBD solid;
+        border: none;
         color: white;
         padding: 14px;
         margin-top: 15px;
+
+        &:hover {
+            background-color: #4797ff;
+        }
     }
 }
 
-.input-form{
+.input-form {
     display: flex;
     position: relative;
-    
-    & i{
+
+    & i {
         position: absolute;
         padding: 16px;
     }
 }
 
 
-.other-login-options, .login {
+.other-login-options,
+.login {
     text-align: center;
     color: #828282;
     font-size: 14px;
 }
 
-.login a{
+.login a {
     text-decoration: none;
     color: #2D9CDB;
 }
 
-.social-network-login{
+.social-network-login {
     display: flex;
     justify-content: space-evenly;
 
     font-size: 32px;
     color: #828282;
 
-    & i:hover{
-        color: #575757;  
+    & i:hover {
+        color: #575757;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        border: none;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        padding: 60px;
+        margin: 0 auto;
     }
 }
