@@ -16,8 +16,8 @@ body {
 
 .button-theme {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 30%;
 
     background-color: #2F80ED;
     border: none;

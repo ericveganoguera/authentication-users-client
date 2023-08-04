@@ -3,6 +3,7 @@ import "./App.css";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { useState } from "react";
+import Personal from "./pages/Personal";
 
 function App() {
   const [isThemeLight, setIsThemeLight] = useState(true);
@@ -21,6 +22,15 @@ function App() {
         path="/login"
         element={
           <Login
+            isThemeLight={isThemeLight}
+            setIsThemeLight={setIsThemeLight}
+          />
+        }
+      />
+      <Route
+        path="/personal"
+        element={
+          <Personal
             isThemeLight={isThemeLight}
             setIsThemeLight={setIsThemeLight}
           />
