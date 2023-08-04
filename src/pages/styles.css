@@ -24,7 +24,10 @@ body {
     border-radius: 8px;
     color: white;
     padding: 14px;
+}
 
+.text-logo{
+    font-weight: 600;
 }
 
 .container-body {
@@ -39,7 +42,7 @@ body {
     border: 1px #BDBDBD solid;
     width: 70%;
     max-width: 600px;
-    height: 800px;
+    height: auto;
     padding: 60px;
     margin: 0 auto;
 }
