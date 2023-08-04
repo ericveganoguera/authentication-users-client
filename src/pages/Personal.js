@@ -23,7 +23,7 @@ function Personal(props) {
               ? props.setIsThemeLight(false)
               : props.setIsThemeLight(true)
           }
-          className="personal-button-theme"
+          className={`${props.isThemeLight? "personal-button-theme-light" : "personal-button-theme-dark"} personal-button-theme`}
         >
           {props.isThemeLight ? "🌙" : "🌞"}
         </button>

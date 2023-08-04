@@ -9,7 +9,7 @@ function Register(props) {
       <section className={`${props.isThemeLight? "light" : "dark"} container-body`}>
           <button
             onClick={()=>(props.isThemeLight? props.setIsThemeLight(false):props.setIsThemeLight(true))}
-            className="button-theme"
+            className={`${props.isThemeLight? "personal-button-theme-light" : "personal-button-theme-dark"} button-theme`}
           >{props.isThemeLight ? "🌙" : "🌞"}</button>
         <div className="content">
           <p className={`${props.isThemeLight ? "text-light-theme" : "text-dark-theme"} text-logo `}><img src={Logo} alt="logo" className="logo" /> devchallenges</p>

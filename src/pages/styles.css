@@ -19,14 +19,24 @@ body {
     top: 10px;
     right: 30%;
 
-    background-color: #2F80ED;
-    border: none;
     border-radius: 8px;
     color: white;
     padding: 14px;
 }
 
-.text-logo{
+.personal-button-theme-light {
+    transition: 0.5s;
+    background-color: white;
+    border: 2px solid #E0E0E0;
+}
+
+.personal-button-theme-dark {
+    transition: 0.5s;
+    background-color: black;
+    border: 2px solid #E0E0E0;
+}
+
+.text-logo {
     font-weight: 600;
 }
 

@@ -13,7 +13,7 @@ function Login(props) {
             ? props.setIsThemeLight(false)
             : props.setIsThemeLight(true)
         }
-        className="button-theme"
+        className={`${props.isThemeLight? "personal-button-theme-light" : "personal-button-theme-dark"} button-theme`}
       >
         {props.isThemeLight ? "🌙" : "🌞"}
       </button>
