@@ -5,10 +5,12 @@ header {
     width: 90%;
     margin: auto;
     padding: 20px;
-}
 
-hr {
-    margin: 0;
+    box-sizing: content-box;
+
+    & div{
+        width: 33%;
+    }
 }
 
 p{
@@ -20,10 +22,45 @@ p{
     height: 100vh;
     display: block;
 }
-
-.personal-button {
-    display: flex;
+.personal-button{
+    position: relative;
+    cursor: pointer;
 }
+.personal-button-dropdown {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.personal-dropdown-none{
+    display: none;
+}
+.personal-dropdown{
+    display: block;
+    border: 1px #E0E0E0 solid;
+    border-radius: 12px;
+    width: 200px;
+
+    padding: 10px;
+
+    position: absolute;
+    right: 0;
+    top: 40px;
+
+    & i{
+        margin-right: 10px;
+    }
+
+    & .personal-dropdown-category{
+        padding: 5px 20px;
+    }
+
+    & .personal-dropdown-logout{
+        padding: 5px 20px;
+        color: #eb5757;
+    }
+}
+
+
 
 .personal-button-theme{
     border-radius: 8px;
