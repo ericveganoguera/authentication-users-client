@@ -107,7 +107,7 @@ function Personal(props) {
               </h1>
               <h3>Some info may be visible to other people</h3>
             </article>
-            <button>Edit</button>
+            <button><Link to="/edit">Edit</Link></button>
           </div>
           <hr />
           <div className="personal-content">
