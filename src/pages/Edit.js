@@ -1,15 +1,15 @@
 import Logo from "../devchallenges-logo-transparent.png";
 import { Link } from "react-router-dom";
 import "./styles.css";
-import "./Personal.css";
+import "./edit.css";
 import { useState } from "react";
 
-function Personal(props) {
+const Edit = (props) => {
 
-  const [isDropDown,setIsDropDown] = useState(false)
-
-  return (
-    <div
+    const [isDropDown,setIsDropDown] = useState(false)
+    
+    return (
+        <div
       className={`${
         props.isThemeLight ? "light" : "dark"
       } personal-container-body`}
@@ -81,20 +81,7 @@ function Personal(props) {
       </header>
 
       <main>
-        <h1
-          className={`${
-            props.isThemeLight ? "text-light-theme" : "text-dark-theme"
-          } personal-title`}
-        >
-          Personal info
-        </h1>
-        <h3
-          className={`${
-            props.isThemeLight ? "text-light-theme" : "text-dark-theme"
-          } personal-subtitle`}
-        >
-          Basic info, like your name and photo
-        </h3>
+        <p className="back"><Link to="/personal">Back</Link></p>
         <section className="personal-information">
           <div className="personal-header">
             <article>
@@ -107,7 +94,7 @@ function Personal(props) {
               </h1>
               <h3>Some info may be visible to other people</h3>
             </article>
-            <Link to="/edit" className="button-edit">Edit</Link>
+            <button><Link to="/edit">Edit</Link></button>
           </div>
           <hr />
           <div className="personal-content">
@@ -178,7 +165,8 @@ function Personal(props) {
         </section>
       </main>
     </div>
-  );
+
+    )
 }
 
-export default Personal;
+export default Edit
